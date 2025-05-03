@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1500.0" prefWidth="1300.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane>
+         <content>
+            <Pane prefHeight="1500.0" prefWidth="1300.0" style="-fx-background-color: ffffff;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="152.0" layoutX="-1.0" stroke="#f2f2f2" strokeType="INSIDE" width="1300.0" />
+                  <ImageView fitHeight="98.0" fitWidth="314.0" layoutX="496.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/LoCarSemFundocortada.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="1037.0" layoutX="278.0" layoutY="217.0" stroke="#f2f2f2" strokeType="INSIDE" width="750.0" />
+                  <Label layoutX="578.0" layoutY="251.0" text="LOGIN" textFill="#c83d3f">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Line endX="500.0" layoutX="443.0" layoutY="336.0" startX="-100.0" stroke="#c83d3f" strokeWidth="1.5" />
+                  <Label layoutX="400.0" layoutY="393.0" text="Nome completo">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="400.0" layoutY="424.0" prefHeight="38.0" prefWidth="501.0" />
+                  <Label layoutX="400.0" layoutY="494.0" text="CPF">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="400.0" layoutY="525.0" prefHeight="38.0" prefWidth="501.0" />
+                  <Label layoutX="785.0" layoutY="999.0" text="Fazer login">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Button layoutX="562.0" layoutY="1107.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="186.0" style="-fx-background-color: C83E3E; -fx-background-radius: 30px;" text="Cadastrar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="400.0" layoutY="603.0" text="Email">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="400.0" layoutY="634.0" prefHeight="38.0" prefWidth="501.0" />
+                  <Label layoutX="400.0" layoutY="704.0" text="Telefone">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="400.0" layoutY="735.0" prefHeight="38.0" prefWidth="501.0" />
+                  <Label layoutX="400.0" layoutY="813.0" text="Cargo (Codigo)">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="400.0" layoutY="844.0" prefHeight="38.0" prefWidth="501.0" />
+                  <Label layoutX="400.0" layoutY="914.0" text="Senha">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="400.0" layoutY="945.0" prefHeight="38.0" prefWidth="501.0" />
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2000.0" prefWidth="1300.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="2000.0" prefWidth="1300.0" style="-fx-background-color: ffffff;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="152.0" layoutX="-1.0" stroke="#f2f2f2" strokeType="INSIDE" width="1300.0" />
+            <ImageView fitHeight="50.0" fitWidth="210.0" layoutX="113.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/LoCarSemFundocortada.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="741.0" layoutY="67.0" text="Veículo">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="875.0" layoutY="67.0" text="Cliente">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="1006.0" layoutY="67.0" text="Painel">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="69.0" fitWidth="85.0" layoutX="1121.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/nicolasCage.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="457.0" layoutY="214.0" text="Carro mais procurado do mês">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Line endX="500.0" layoutX="802.0" layoutY="259.0" startX="-100.0" stroke="#c83e3e" />
+            <ImageView fitHeight="287.0" fitWidth="366.0" layoutX="217.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/gol.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</VBox>
