@@ -34,7 +34,7 @@
                         <Font size="20.0" />
                      </font>
                      <cursor>
-                        <Cursor fx:constant="HAND" />
+                        <Cursor fx:constant="WAIT" />
                      </cursor>
                   </Label>
                   <Label layoutX="875.0" layoutY="67.0" text="Cliente">
@@ -285,6 +285,18 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
+                  <Button layoutX="873.0" layoutY="70.0" mnemonicParsing="false" onAction="#CadastroDeCliente" opacity="0.0" prefHeight="25.0" prefWidth="66.0" text="Cliente ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="1007.0" layoutY="70.0" mnemonicParsing="false" onAction="#IrPainel" opacity="0.0" prefHeight="25.0" prefWidth="57.0" text="Painel">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="133.0" layoutY="55.0" mnemonicParsing="false" onAction="#IrTelaInicial" opacity="0.0" prefHeight="44.0" prefWidth="171.0" text="Button">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children>
             </Pane>
          </content>

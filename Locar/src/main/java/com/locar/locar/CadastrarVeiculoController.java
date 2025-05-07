@@ -1,14 +1,16 @@
 package com.locar.locar;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import java.awt.*;
-import java.awt.event.ActionEvent;
+import javafx.stage.Stage;
+
 import java.io.File;
 
 public class CadastrarVeiculoController {
@@ -38,7 +40,6 @@ public class CadastrarVeiculoController {
         }
     }
 
-
     //Adicionar arquivos
     @FXML
     private void selecionarArquivo() {
@@ -67,6 +68,41 @@ public class CadastrarVeiculoController {
         }
     }
 
+    public void CadastroDeCliente(javafx.event.ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadastrarCliente.fxml"));
+            Parent telaPrincipalRoot = fxmlLoader.load();
 
+            Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stageAtual.getScene().setRoot(telaPrincipalRoot);
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void IrPainel(javafx.event.ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Painel.fxml"));
+            Parent telaPrincipalRoot = fxmlLoader.load();
+
+            Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stageAtual.getScene().setRoot(telaPrincipalRoot);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void IrTelaInicial(javafx.event.ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TelaInicial.fxml"));
+            Parent telaPrincipalRoot = fxmlLoader.load();
+
+            Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stageAtual.getScene().setRoot(telaPrincipalRoot);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
