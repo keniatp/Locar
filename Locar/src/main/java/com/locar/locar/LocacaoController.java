@@ -1,11 +1,46 @@
 package com.locar.locar;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.*;
 
 public class LocacaoController {
+    //Locação
+    @FXML
+    private TextField cliente;
+    @FXML
+    private TextField veiculo;
+    @FXML
+    private DatePicker periodoInicio;
+    @FXML
+    private DatePicker periodoFinal;
+    @FXML
+    private TextField taxa;
+
+    //Pagamento
+    @FXML
+    private DatePicker dataPagamento;
+    @FXML
+    private MenuButton formaDePagamento;
+    @FXML
+    private TextField valorTotal;
+
+    //Devolução
+    @FXML
+    private DatePicker dataDevolucao;
+    @FXML
+    private TextField combustivel;
+    @FXML
+    private MenuButton status;
+    @FXML
+    private TextField observacao;
+
     public void Painel(javafx.event.ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Painel.fxml"));

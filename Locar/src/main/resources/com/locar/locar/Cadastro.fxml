@@ -31,13 +31,13 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="400.0" layoutY="424.0" prefHeight="38.0" prefWidth="501.0" />
+                  <TextField fx:id="nomeCompleto" layoutX="400.0" layoutY="424.0" prefHeight="38.0" prefWidth="501.0" />
                   <Label layoutX="400.0" layoutY="494.0" text="CPF">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="400.0" layoutY="525.0" prefHeight="38.0" prefWidth="501.0" />
+                  <TextField fx:id="CPF" layoutX="400.0" layoutY="525.0" prefHeight="38.0" prefWidth="501.0" />
                   <Label layoutX="785.0" layoutY="999.0" text="Fazer login">
                      <font>
                         <Font size="21.0" />
@@ -59,25 +59,25 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="400.0" layoutY="634.0" prefHeight="38.0" prefWidth="501.0" />
+                  <TextField fx:id="email" layoutX="400.0" layoutY="634.0" prefHeight="38.0" prefWidth="501.0" />
                   <Label layoutX="400.0" layoutY="704.0" text="Telefone">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="400.0" layoutY="735.0" prefHeight="38.0" prefWidth="501.0" />
+                  <TextField fx:id="telefone" layoutX="400.0" layoutY="735.0" prefHeight="38.0" prefWidth="501.0" />
                   <Label layoutX="400.0" layoutY="813.0" text="Cargo (Codigo)">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="400.0" layoutY="844.0" prefHeight="38.0" prefWidth="501.0" />
+                  <TextField fx:id="codigo" layoutX="400.0" layoutY="844.0" prefHeight="38.0" prefWidth="501.0" />
                   <Label layoutX="400.0" layoutY="914.0" text="Senha">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="400.0" layoutY="945.0" prefHeight="38.0" prefWidth="501.0" />
+                  <TextField fx:id="senha" layoutX="400.0" layoutY="945.0" prefHeight="38.0" prefWidth="501.0" />
                   <Button layoutX="784.0" layoutY="1002.0" mnemonicParsing="false" onAction="#FazerLogin" opacity="0.0" prefHeight="25.0" prefWidth="108.0" text="Button">
                      <cursor>
                         <Cursor fx:constant="HAND" />

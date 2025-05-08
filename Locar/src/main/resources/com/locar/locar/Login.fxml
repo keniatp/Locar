@@ -31,13 +31,13 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="400.0" layoutY="424.0" prefHeight="38.0" prefWidth="501.0" />
+                  <TextField fx:id="nome" layoutX="400.0" layoutY="424.0" prefHeight="38.0" prefWidth="501.0" />
                   <Label layoutX="400.0" layoutY="494.0" text="Senha">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="400.0" layoutY="525.0" prefHeight="38.0" prefWidth="501.0" />
+                  <TextField fx:id="senha" layoutX="400.0" layoutY="525.0" prefHeight="38.0" prefWidth="501.0" />
                   <Label layoutX="745.0" layoutY="583.0" text="Esqueceu a senha" textFill="#1aa7ff">
                      <font>
                         <Font size="17.0" />

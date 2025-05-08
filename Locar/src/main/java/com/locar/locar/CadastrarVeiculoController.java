@@ -4,17 +4,59 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.scene.control.*;
+import javafx.util.*;
 
 import java.io.File;
 
 public class CadastrarVeiculoController {
-    //ADicionar imagem
+    //Cadastrar veiculo
+    @FXML
+    private TextField marca;
+    @FXML
+    private TextField modelo;
+    @FXML
+    private TextField ano;
+    @FXML
+    private TextField cor;
+    @FXML
+    private TextField placa;
+    @FXML
+    private TextField renavam;
+    @FXML
+    private MenuButton capacidade;
+    @FXML
+    private MenuButton cambio;
+
+    //Documentação
+    @FXML
+    private DatePicker ipva;
+    @FXML
+    private DatePicker seguro;
+    @FXML
+    private DatePicker vistoria;
+    @FXML
+    private MenuButton status;
+    @FXML
+    private TextField quilometragem;
+    @FXML
+    private DatePicker dataAquisicao;
+
+    //manutenção e constrole
+    @FXML
+    private DatePicker ultimaManutencao;
+    @FXML
+    private DatePicker proximaManutencao;
+    @FXML
+    private TextField tipoDeManutencao;
+    @FXML
+    private TextField observacao;
+
+    //Adicionar imagem
     @FXML
     private Button btnSelecionarImagem;
     @FXML

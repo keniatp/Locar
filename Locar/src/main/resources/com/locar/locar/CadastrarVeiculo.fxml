@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="2300.0" prefWidth="1300.0" spacing="20.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.locar.locar.CadastrarVeiculoController">
+<VBox alignment="CENTER" prefHeight="2300.0" prefWidth="1300.0" spacing="20.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.locar.locar.CadastrarVeiculoController">
    <children>
       <ScrollPane prefHeight="2300.0" prefWidth="1300.0">
          <content>
@@ -68,11 +68,11 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="128.0" layoutY="393.0" prefHeight="38.0" prefWidth="430.0">
+                  <TextField fx:id="marca" layoutX="128.0" layoutY="393.0" prefHeight="38.0" prefWidth="430.0">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor></TextField>
-                  <TextField layoutX="709.0" layoutY="393.0" prefHeight="38.0" prefWidth="430.0">
+                  <TextField fx:id="modelo" layoutX="709.0" layoutY="393.0" prefHeight="38.0" prefWidth="430.0">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor></TextField>
@@ -86,7 +86,7 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="128.0" layoutY="517.0" prefHeight="38.0" prefWidth="266.0">
+                  <TextField fx:id="ano" layoutX="128.0" layoutY="517.0" prefHeight="38.0" prefWidth="266.0">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor></TextField>
@@ -95,7 +95,7 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="506.0" layoutY="517.0" prefHeight="38.0" prefWidth="266.0">
+                  <TextField fx:id="cor" layoutX="506.0" layoutY="517.0" prefHeight="38.0" prefWidth="266.0">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor></TextField>
@@ -104,7 +104,7 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="874.0" layoutY="517.0" prefHeight="38.0" prefWidth="266.0">
+                  <TextField fx:id="placa" layoutX="874.0" layoutY="517.0" prefHeight="38.0" prefWidth="266.0">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor></TextField>
@@ -113,7 +113,7 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <MenuButton layoutX="128.0" layoutY="641.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="212.0" text="5 pessoas">
+                  <MenuButton fx:id="capacidade" layoutX="128.0" layoutY="641.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="212.0" text="5 pessoas">
                     <items>
                       <MenuItem mnemonicParsing="false" text="2 pessoas" />
                         <MenuItem mnemonicParsing="false" text="4 pessoas" />
@@ -131,7 +131,7 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <MenuButton layoutX="449.0" layoutY="641.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="264.0" text="Manual">
+                  <MenuButton fx:id="cambio" layoutX="449.0" layoutY="641.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="264.0" text="Manual">
                      <items>
                         <MenuItem mnemonicParsing="false" text="Manual" />
                         <MenuItem mnemonicParsing="false" text="Automático" />
@@ -148,7 +148,7 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="822.0" layoutY="641.0" prefHeight="38.0" prefWidth="318.0">
+                  <TextField fx:id="renavam" layoutX="822.0" layoutY="641.0" prefHeight="38.0" prefWidth="318.0">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor></TextField>
@@ -162,37 +162,37 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <DatePicker layoutX="128.0" layoutY="905.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
+                  <DatePicker fx:id="ipva" layoutX="128.0" layoutY="905.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
                   <Label layoutX="129.0" layoutY="871.0" text="IPVA (vencimento)">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <DatePicker layoutX="502.0" layoutY="905.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
+                  <DatePicker fx:id="seguro" layoutX="502.0" layoutY="905.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
                   <Label layoutX="503.0" layoutY="871.0" text="Seguro (vencimento)">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <DatePicker layoutX="872.0" layoutY="905.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
+                  <DatePicker fx:id="vistoria" layoutX="872.0" layoutY="905.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
                   <Label layoutX="873.0" layoutY="871.0" text="Última vistoria">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <DatePicker layoutX="872.0" layoutY="1023.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
+                  <DatePicker fx:id="dataAquisicao" layoutX="872.0" layoutY="1023.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
                   <Label layoutX="873.0" layoutY="995.0" text="Data aquisição">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="449.0" layoutY="1023.0" prefHeight="38.0" prefWidth="318.0" />
+                  <TextField fx:id="quilometragem" layoutX="449.0" layoutY="1023.0" prefHeight="38.0" prefWidth="318.0" />
                   <Label layoutX="449.0" layoutY="995.0" text="Quilometragem atual">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <MenuButton layoutX="128.0" layoutY="1023.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="212.0" text="Disponível">
+                  <MenuButton fx:id="status" layoutX="128.0" layoutY="1023.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="212.0" text="Disponível">
                      <items>
                         <MenuItem mnemonicParsing="false" text="Disponível" />
                         <MenuItem mnemonicParsing="false" text="Inativo" />
@@ -215,19 +215,19 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <DatePicker layoutX="128.0" layoutY="1274.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
+                  <DatePicker fx:id="ultimaManutencao" layoutX="128.0" layoutY="1274.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
                   <Label layoutX="128.0" layoutY="1240.0" text="Última manutenção">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <DatePicker layoutX="473.0" layoutY="1274.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
+                  <DatePicker fx:id="proximaManutencao" layoutX="473.0" layoutY="1274.0" prefHeight="38.0" prefWidth="262.0" promptText="16/05/2025" />
                   <Label layoutX="473.0" layoutY="1240.0" text="Próxima manutenção">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="816.0" layoutY="1274.0" prefHeight="38.0" prefWidth="318.0">
+                  <TextField fx:id="tipoDeManutencao" layoutX="816.0" layoutY="1274.0" prefHeight="38.0" prefWidth="318.0">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor></TextField>
@@ -236,7 +236,7 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="128.0" layoutY="1385.0" prefHeight="76.0" prefWidth="1009.0">
+                  <TextField fx:id="observacao" layoutX="128.0" layoutY="1385.0" prefHeight="76.0" prefWidth="1009.0">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor></TextField>

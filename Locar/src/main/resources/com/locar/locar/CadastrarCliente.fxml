@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1520.0" prefWidth="1300.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.locar.locar.CadastrarClienteController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1520.0" prefWidth="1300.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.locar.locar.CadastrarClienteController">
    <children>
       <ScrollPane>
          <content>
@@ -44,25 +44,25 @@
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="128.0" layoutY="348.0" prefHeight="38.0" prefWidth="1009.0" />
+                  <TextField fx:id="cadastrarNome" layoutX="128.0" layoutY="348.0" prefHeight="38.0" prefWidth="1009.0" />
                   <Label layoutX="128.0" layoutY="317.0" text="Nome(Cliente)">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="128.0" layoutY="461.0" prefHeight="38.0" prefWidth="425.0" />
+                  <TextField fx:id="cadastrarCpf" layoutX="128.0" layoutY="461.0" prefHeight="38.0" prefWidth="425.0" />
                   <Label layoutX="128.0" layoutY="430.0" text="CPF">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="715.0" layoutY="461.0" prefHeight="38.0" prefWidth="425.0" />
+                  <TextField fx:id="cadastrarTelefone" layoutX="715.0" layoutY="461.0" prefHeight="38.0" prefWidth="425.0" />
                   <Label layoutX="715.0" layoutY="430.0" text="Telefone">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="128.0" layoutY="564.0" prefHeight="38.0" prefWidth="608.0" />
+                  <TextField fx:id="cadastrarEmail" layoutX="128.0" layoutY="564.0" prefHeight="38.0" prefWidth="608.0" />
                   <Label layoutX="128.0" layoutY="533.0" text="Email">
                      <font>
                         <Font size="22.0" />
@@ -73,37 +73,37 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <DatePicker layoutX="812.0" layoutY="564.0" prefHeight="38.0" prefWidth="330.0" />
+                  <DatePicker fx:id="cadastrarNascimento" layoutX="812.0" layoutY="564.0" prefHeight="38.0" prefWidth="330.0" />
                   <Label layoutX="530.0" layoutY="732.0" text="Informações CNH">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="128.0" layoutY="841.0" prefHeight="38.0" prefWidth="425.0" />
+                  <TextField fx:id="numeroCNH" layoutX="128.0" layoutY="841.0" prefHeight="38.0" prefWidth="425.0" />
                   <Label layoutX="128.0" layoutY="810.0" text="Número (CNH)">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="714.0" layoutY="841.0" prefHeight="38.0" prefWidth="425.0" />
+                  <TextField fx:id="dataValidade" layoutX="714.0" layoutY="841.0" prefHeight="38.0" prefWidth="425.0" />
                   <Label layoutX="714.0" layoutY="810.0" text="Data de validade">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="128.0" layoutY="956.0" prefHeight="38.0" prefWidth="425.0" />
+                  <TextField fx:id="StatusCNH" layoutX="128.0" layoutY="956.0" prefHeight="38.0" prefWidth="425.0" />
                   <Label layoutX="128.0" layoutY="925.0" text="Status (CNH)">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="714.0" layoutY="956.0" prefHeight="38.0" prefWidth="425.0" />
+                  <TextField fx:id="ufCNH" layoutX="714.0" layoutY="956.0" prefHeight="38.0" prefWidth="425.0" />
                   <Label layoutX="714.0" layoutY="925.0" text="UF">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="128.0" layoutY="1068.0" prefHeight="38.0" prefWidth="425.0" />
+                  <TextField fx:id="categoriaCNH" layoutX="128.0" layoutY="1068.0" prefHeight="38.0" prefWidth="425.0" />
                   <Label layoutX="128.0" layoutY="1037.0" text="Categoria">
                      <font>
                         <Font size="22.0" />

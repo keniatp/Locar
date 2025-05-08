@@ -1,13 +1,25 @@
 package com.locar.locar;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.Stage;
+import javafx.scene.control.*;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
+
+
 public class LoginController {
+    @FXML
+    private TextField nome;
+    @FXML
+    private TextField senha;
+
     public void CriarConta(javafx.event.ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Cadastro.fxml"));
@@ -20,6 +32,7 @@ public class LoginController {
             e.printStackTrace();
         }
     }
+
     public void TelaInicial(javafx.event.ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TelaInicial.fxml"));
@@ -32,7 +45,4 @@ public class LoginController {
             e.printStackTrace();
         }
     }
-
-
-
 }

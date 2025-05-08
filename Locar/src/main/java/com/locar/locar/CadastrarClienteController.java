@@ -1,11 +1,40 @@
 package com.locar.locar;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.*;
+
+import java.awt.*;
 
 public class CadastrarClienteController {
+    //Cadastrar cliente
+    @FXML
+    private TextField cadastrarNome;
+    @FXML
+    private TextField cadastrarCpf;
+    @FXML
+    private TextField cadastrarTelefone;
+    @FXML
+    private TextField cadastrarEmail;
+    @FXML
+    private DatePicker cadastrarNascimento;
+
+    //Informações do CNH
+    @FXML
+    private TextField numeroCNH;
+    @FXML
+    private TextField dataValidade;
+    @FXML
+    private TextField StatusCNH;
+    @FXML
+    private TextField ufCNH;
+    @FXML
+    private TextField categoriaCNH;
+
 
     public void CadastrarVeiculos(javafx.event.ActionEvent event) {
         try {
