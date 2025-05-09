@@ -7,7 +7,9 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1520.0" prefWidth="1300.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.locar.locar.CadastrarClienteController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1520.0" prefWidth="1300.0" style="-fx-background-color: ffffff;"
+   xmlns="http://javafx.com/javafx/11.0.14-internal"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.locar.locar.CadastrarClienteController">
    <children>
       <ScrollPane>
          <content>
@@ -109,7 +111,7 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <Button layoutX="577.0" layoutY="1215.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="186.0" style="-fx-background-color: C83E3E; -fx-background-radius: 30px;" text="SALVAR" textFill="WHITE">
+                  <Button layoutX="577.0" layoutY="1215.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="186.0" style="-fx-background-color: C83E3E; -fx-background-radius: 30px;" text="SALVAR" textFill="WHITE" onAction="#salvarCliente">
                      <font>
                         <Font size="21.0" />
                      </font>
@@ -120,7 +122,8 @@
                   <Button layoutX="741.0" layoutY="70.0" mnemonicParsing="false" onAction="#CadastrarVeiculos" opacity="0.0" prefHeight="25.0" prefWidth="64.0" text="Veiculos ">
                      <cursor>
                         <Cursor fx:constant="HAND" />
-                     </cursor></Button>
+                     </cursor>
+                  </Button>
                   <Button layoutX="875.0" layoutY="70.0" mnemonicParsing="false" onAction="#CadastrarVeiculos" opacity="0.0" prefHeight="25.0" prefWidth="60.0" text="Button">
                      <cursor>
                         <Cursor fx:constant="WAIT" />
@@ -129,11 +132,13 @@
                   <Button layoutX="1007.0" layoutY="70.0" mnemonicParsing="false" onAction="#Painel" opacity="0.0" prefHeight="25.0" prefWidth="57.0" text="Painel">
                      <cursor>
                         <Cursor fx:constant="HAND" />
-                     </cursor></Button>
+                     </cursor>
+                  </Button>
                   <Button layoutX="134.0" layoutY="52.0" mnemonicParsing="false" onAction="#IrTelaInicial" opacity="0.0" prefHeight="45.0" prefWidth="166.0" text="Button">
                      <cursor>
                         <Cursor fx:constant="HAND" />
-                     </cursor></Button>
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
          </content>

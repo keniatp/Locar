@@ -4,39 +4,56 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.scene.control.*;
 
-import java.awt.*;
+public class LocacaoController {
+    // Locação
+    @FXML
+    private TextField cliente;
+    @FXML
+    private TextField veiculo;
+    @FXML
+    private DatePicker periodoInicio;
+    @FXML
+    private DatePicker periodoFinal;
+    @FXML
+    private TextField taxa;
 
-public class CadastrarClienteController {
-    //Cadastrar cliente
+    // Pagamento
     @FXML
-    private TextField cadastrarNome;
+    private DatePicker dataPagamento;
     @FXML
-    private TextField cadastrarCpf;
+    private MenuButton formaDePagamento;
     @FXML
-    private TextField cadastrarTelefone;
-    @FXML
-    private TextField cadastrarEmail;
-    @FXML
-    private DatePicker cadastrarNascimento;
+    private TextField valorTotal;
 
-    //Informações do CNH
+    // Devolução
     @FXML
-    private TextField numeroCNH;
+    private DatePicker dataDevolucao;
     @FXML
-    private TextField dataValidade;
+    private TextField combustivel;
     @FXML
-    private TextField StatusCNH;
+    private MenuButton status;
     @FXML
-    private TextField ufCNH;
-    @FXML
-    private TextField categoriaCNH;
+    private TextField observacao;
 
+    public void Painel(javafx.event.ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Painel.fxml"));
+            Parent telaPrincipalRoot = fxmlLoader.load();
 
-    public void CadastrarVeiculos(javafx.event.ActionEvent event) {
+            Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stageAtual.getScene().setRoot(telaPrincipalRoot);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void Veiculo(javafx.event.ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadastrarVeiculo.fxml"));
             Parent telaPrincipalRoot = fxmlLoader.load();
@@ -48,9 +65,10 @@ public class CadastrarClienteController {
             e.printStackTrace();
         }
     }
-    public void Painel(javafx.event.ActionEvent event) {
+
+    public void Clientes(javafx.event.ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Painel.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CadastrarCliente.fxml"));
             Parent telaPrincipalRoot = fxmlLoader.load();
 
             Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();

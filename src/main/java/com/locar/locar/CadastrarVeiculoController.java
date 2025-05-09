@@ -9,12 +9,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
-import javafx.util.*;
 
 import java.io.File;
 
 public class CadastrarVeiculoController {
-    //Cadastrar veiculo
+    // Cadastrar veiculo
     @FXML
     private TextField marca;
     @FXML
@@ -32,7 +31,7 @@ public class CadastrarVeiculoController {
     @FXML
     private MenuButton cambio;
 
-    //Documentação
+    // Documentação
     @FXML
     private DatePicker ipva;
     @FXML
@@ -46,7 +45,7 @@ public class CadastrarVeiculoController {
     @FXML
     private DatePicker dataAquisicao;
 
-    //manutenção e constrole
+    // manutenção e constrole
     @FXML
     private DatePicker ultimaManutencao;
     @FXML
@@ -56,25 +55,24 @@ public class CadastrarVeiculoController {
     @FXML
     private TextField observacao;
 
-    //Adicionar imagem
+    // Adicionar imagem
     @FXML
     private Button btnSelecionarImagem;
     @FXML
     private ImageView imageViewVeiculo;
 
-    //Adicionar arquivos
+    // Adicionar arquivos
     @FXML
     private Button btnSelecionarArquivo;
     @FXML
     private Label labelArquivoSelecionado;
 
-    @FXML //Adicionar imagem
+    @FXML // Adicionar imagem
     private void selecionarImagem(javafx.event.ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Selecionar Imagem");
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Imagens", "*.png", "*.jpg", "*.jpeg")
-        );
+                new FileChooser.ExtensionFilter("Imagens", "*.png", "*.jpg", "*.jpeg"));
         File arquivoSelecionado = fileChooser.showOpenDialog(null);
         if (arquivoSelecionado != null) {
             Image imagem = new Image(arquivoSelecionado.toURI().toString());
@@ -82,7 +80,7 @@ public class CadastrarVeiculoController {
         }
     }
 
-    //Adicionar arquivos
+    // Adicionar arquivos
     @FXML
     private void selecionarArquivo() {
         FileChooser fileChooser = new FileChooser();
@@ -90,15 +88,14 @@ public class CadastrarVeiculoController {
 
         // Permitir todos os tipos de arquivo:
         /*
-        fileChooser.getExtensionFilters().add(
-                new FileChooser.ExtensionFilter("Todos os arquivos", "*.*")
-        );
-        */
+         * fileChooser.getExtensionFilters().add(
+         * new FileChooser.ExtensionFilter("Todos os arquivos", "*.*")
+         * );
+         */
 
         fileChooser.getExtensionFilters().addAll(
-            new FileChooser.ExtensionFilter("PDF", "*.pdf"),
-            new FileChooser.ExtensionFilter("Word", "*.docx")
-        );
+                new FileChooser.ExtensionFilter("PDF", "*.pdf"),
+                new FileChooser.ExtensionFilter("Word", "*.docx"));
 
         File arquivoSelecionado = fileChooser.showOpenDialog(null);
 
@@ -122,6 +119,7 @@ public class CadastrarVeiculoController {
             e.printStackTrace();
         }
     }
+
     public void IrPainel(javafx.event.ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Painel.fxml"));

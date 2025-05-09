@@ -6,13 +6,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.Stage;
-import javafx.scene.control.*;
-
-import java.awt.*;
-import java.awt.event.ActionEvent;
-
-
 
 public class LoginController {
     @FXML
