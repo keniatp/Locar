@@ -1,4 +1,4 @@
-function createFetchRequest(endpoint, requestBody) {
+function createPOSTRequest(endpoint, requestBody) {
 	return () =>
 		fetch(`http://localhost:8080/${endpoint}`, {
 			method: "POST",
@@ -7,15 +7,33 @@ function createFetchRequest(endpoint, requestBody) {
 		});
 }
 
-function createEndpointConfig(endpoint, bodyBuilder, requiredArgs) {
+function createGETRequest(endpoint, requestBody) {
+	return () =>
+		fetch(
+			`http://localhost:8080/${endpoint}?${
+				Object.entries(requestBody).map(([key, value]) =>
+					`${key}=${value}`
+				).join("&")
+			}`,
+		);
+}
+
+function createPOSTConfig(endpoint, bodyBuilder, requiredArgs) {
 	return () => ({
-		request: createFetchRequest(endpoint, bodyBuilder()),
+		request: createPOSTRequest(endpoint, bodyBuilder()),
+		requiredArgs,
+	});
+}
+
+function createGETConfig(endpoint, bodyBuilder, requiredArgs) {
+	return () => ({
+		request: createGETRequest(endpoint, bodyBuilder()),
 		requiredArgs,
 	});
 }
 
 const apiMethods = {
-	createUser: createEndpointConfig("usuario", () => ({
+	createUser: createPOSTConfig("usuario", () => ({
 		cadastroUsuario: {
 			id_cadastroUsuario: 0,
 			nome: Deno.args[1],
@@ -34,6 +52,78 @@ const apiMethods = {
 			categoria: Deno.args[10],
 		},
 	}), 10),
+	createVehicle: createPOSTConfig("veiculo", () => ({
+		documentacao: {
+			id_documentacao: 0,
+			ipva: Deno.args[1],
+			seguroVencimento: Deno.args[2],
+			quilometragemAtual: Deno.args[3],
+			dataAquisicao: Deno.args[4],
+			vistoria: Deno.args[5],
+		},
+		cadastroVeiculo: {
+			id_cadastroVeiculo: 0,
+			marca: Deno.args[6],
+			modelo: Deno.args[7],
+			ano: Deno.args[8],
+			cor: Deno.args[9],
+			placa: Deno.args[10],
+			valorTotal: Deno.args[11],
+			statusOcupacao: Deno.args[12],
+			renavam: Deno.args[13],
+			tipoCambio: Deno.args[14],
+			capacidade: Deno.args[15],
+			documentacao_id_documentacao: 0,
+		},
+		manutencaoVeiculo: {
+			id_manutencaoVeiculo: 0,
+			dataManutencao: Deno.args[16],
+			tipoManutencao: Deno.args[17],
+			custo: Deno.args[18],
+			cadastroVeiculo_id_cadastroVeiculo: 0,
+		},
+	}), 18),
+	createEmployee: createPOSTConfig("funcionario", () => ({
+		id_cadastroFuncionario: 0,
+		nome: Deno.args[1],
+		cpf: Deno.args[2],
+		email: Deno.args[3],
+		telefone: Deno.args[4],
+		cargo: Deno.args[5],
+		senha: Deno.args[6],
+	}), 6),
+	getEmployee: createGETConfig("funcionario", () => ({
+		email: Deno.args[1],
+		senha: Deno.args[2],
+	}), 2),
+	createRenting: createPOSTConfig("locacao", () => ({
+		locacaoDados: {
+			id_locacaoDados: 0,
+			valorTotal: Deno.args[1],
+			status: Deno.args[2],
+			dataSaida: Deno.args[3],
+			dataDevolucao: Deno.args[4],
+			cadastroUsuario_id_cadastroUsuario: Deno.args[5],
+			cadastroFuncionario_id_cadastroFuncionario: Deno.args[6],
+			cadastroVeiculo_id_cadastroVeiculo: Deno.args[7],
+		},
+		devolucao: {
+			id_devolucao: 0,
+			dataDevolucao: Deno.args[8],
+			combustivelRestante: Deno.args[9],
+			statusVeiculo: Deno.args[10],
+			observacao: Deno.args[11],
+		},
+		pagamento: {
+			id_pagamento: 0,
+			valorTotal: Deno.args[12],
+			data: Deno.args[13],
+			metodoPagamento: Deno.args[14],
+			devolucao_id_devolucao: 0,
+			taxa_id_taxa: Deno.args[15],
+			locacaoDados_id_locacaoDados: 0,
+		},
+	}), 15),
 };
 
 const [command] = Deno.args;
@@ -64,7 +154,9 @@ methodConfig.request()
 	)
 	.then((response) => {
 		if (typeof response === "string") {
-			console.log(response || "Empty response received");
+			response
+				? console.log(response)
+				: console.error("Empty response received");
 			return;
 		}
 
