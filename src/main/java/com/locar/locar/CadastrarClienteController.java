@@ -1,10 +1,11 @@
 package com.locar.locar;
 
+import com.locar.locar.ExeExecutor.ExecutionResult;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
 
@@ -73,6 +74,26 @@ public class CadastrarClienteController {
     }
 
     public void salvarCliente() {
+        try {
+            ExecutionResult result = ExeExecutor.executeExe("api_bundle.exe",
+                    new String[] { "createUser", cadastrarNome.getText(), cadastrarCpf.getText(),
+                            cadastrarTelefone.getText(), cadastrarEmail.getText(),
+                            cadastrarNascimento.getValue().toString(), numeroCNH.getText(), dataValidade.getText(),
+                            StatusCNH.getText(), ufCNH.getText(), categoriaCNH.getText() });
 
+            if (!result.stderr.isEmpty()) {
+                throw new Exception(result.stderr);
+            }
+
+            System.out.println(result.stdout);
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText(null);
+            alert.setContentText("Sucesso!");
+            alert.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

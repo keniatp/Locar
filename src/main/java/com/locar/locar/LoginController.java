@@ -1,5 +1,7 @@
 package com.locar.locar;
 
+import com.locar.locar.ExeExecutor.ExecutionResult;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,7 +11,7 @@ import javafx.stage.Stage;
 
 public class LoginController {
     @FXML
-    private TextField nome;
+    private TextField email;
     @FXML
     private TextField senha;
 
@@ -28,6 +30,15 @@ public class LoginController {
 
     public void TelaInicial(javafx.event.ActionEvent event) {
         try {
+            ExecutionResult result = ExeExecutor.executeExe("api_bundle.exe",
+                    new String[] { "getEmployee", email.getText(), senha.getText() });
+
+            if (!result.stderr.isEmpty()) {
+                throw new Exception(result.stderr);
+            }
+
+            System.out.println(result.stdout);
+
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TelaInicial.fxml"));
             Parent telaPrincipalRoot = fxmlLoader.load();
 
