@@ -11,7 +11,7 @@ function createGETRequest(endpoint, requestBody) {
 	return () =>
 		fetch(
 			`http://localhost:8080/${endpoint}?${
-				Object.entries(requestBody).map(([key, value]) =>
+				Object.entries(requestBody || {}).map(([key, value]) =>
 					`${key}=${value}`
 				).join("&")
 			}`,
@@ -25,9 +25,12 @@ function createPOSTConfig(endpoint, bodyBuilder, requiredArgs) {
 	});
 }
 
-function createGETConfig(endpoint, bodyBuilder, requiredArgs) {
+function createGETConfig(endpoint, bodyBuilder, requiredArgs = 0) {
 	return () => ({
-		request: createGETRequest(endpoint, bodyBuilder()),
+		request: createGETRequest(
+			endpoint,
+			bodyBuilder instanceof Function ? bodyBuilder() : undefined,
+		),
 		requiredArgs,
 	});
 }
@@ -52,6 +55,7 @@ const apiMethods = {
 			categoria: Deno.args[10],
 		},
 	}), 10),
+	getUsers: createGETConfig("usuarios"),
 	createVehicle: createPOSTConfig("veiculo", () => ({
 		documentacao: {
 			id_documentacao: 0,
@@ -83,6 +87,7 @@ const apiMethods = {
 			cadastroVeiculo_id_cadastroVeiculo: 0,
 		},
 	}), 18),
+	getVehicles: createGETConfig("veiculos"),
 	createEmployee: createPOSTConfig("funcionario", () => ({
 		id_cadastroFuncionario: 0,
 		nome: Deno.args[1],
@@ -124,6 +129,7 @@ const apiMethods = {
 			locacaoDados_id_locacaoDados: 0,
 		},
 	}), 15),
+	getFees: createGETConfig("taxas"),
 };
 
 const [command] = Deno.args;
@@ -160,9 +166,14 @@ methodConfig.request()
 			return;
 		}
 
-		Object.entries(response).forEach(([key, value]) => {
-			console.log(`${key}: ${JSON.stringify(value)}`);
-		});
+		for (
+			const element of response instanceof Array ? response : [response]
+		) {
+			Object.entries(element).forEach(([key, value]) => {
+				console.log(`${key}: ${JSON.stringify(value)}`);
+			});
+			console.log("_\t_");
+		}
 	})
 	.catch((error) => {
 		console.error("Request failed:", error.message);
