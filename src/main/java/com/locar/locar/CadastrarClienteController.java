@@ -93,6 +93,11 @@ public class CadastrarClienteController {
             alert.setContentText("Sucesso!");
             alert.showAndWait();
         } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Erro! Entre em contato com o suporte");
+            alert.showAndWait();
             e.printStackTrace();
         }
     }

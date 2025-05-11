@@ -7,7 +7,9 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1700.0" prefWidth="1300.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.locar.locar.LocacaoController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1700.0" prefWidth="1300.0" style="-fx-background-color: ffffff;"
+   xmlns="http://javafx.com/javafx/11.0.14-internal"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.locar.locar.LocacaoController">
    <children>
       <ScrollPane>
          <content>
@@ -49,18 +51,26 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="cliente" layoutX="128.0" layoutY="375.0" prefHeight="38.0" prefWidth="1009.0" />
+                  <MenuButton fx:id="cliente" layoutX="128.0" layoutY="375.0" prefHeight="38.0" prefWidth="1009.0">
+                     <items>
+
+                     </items>
+                  </MenuButton>
                   <Label layoutX="128.0" layoutY="445.0" text="Veículo">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="veiculo" layoutX="128.0" layoutY="479.0" prefHeight="38.0" prefWidth="1008.0" />
+                  <MenuButton fx:id="veiculo" layoutX="128.0" layoutY="479.0" prefHeight="38.0" prefWidth="1008.0">
+                     <items>
+
+                     </items>
+                  </MenuButton>
                   <MenuButton fx:id="status" layoutX="827.0" layoutY="1013.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="312.0" text="Disponivel">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Disponível" />
-                      <MenuItem mnemonicParsing="false" text="Indisponível" />
-                    </items>
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Disponível" />
+                        <MenuItem mnemonicParsing="false" text="Indisponível" />
+                     </items>
                   </MenuButton>
                   <Label layoutX="827.0" layoutY="979.0" text="Status">
                      <font>
@@ -89,7 +99,11 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="taxa" layoutX="781.0" layoutY="584.0" prefHeight="38.0" prefWidth="358.0" />
+                  <MenuButton fx:id="taxa" layoutX="781.0" layoutY="584.0" prefHeight="38.0" prefWidth="358.0">
+                     <items>
+
+                     </items>
+                  </MenuButton>
                   <Label layoutX="128.0" layoutY="724.0" text="Pagamento">
                      <font>
                         <Font name="System Bold" size="25.0" />
@@ -120,7 +134,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="valorTotal" layoutX="828.0" layoutY="811.0" prefHeight="38.0" prefWidth="310.0" />
-                  <Button layoutX="585.0" layoutY="1322.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="186.0" style="-fx-background-color: C83E3E; -fx-background-radius: 30px;" text="SALVAR" textFill="WHITE">
+                  <Button layoutX="585.0" layoutY="1322.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="186.0" style="-fx-background-color: C83E3E; -fx-background-radius: 30px;" text="SALVAR" textFill="WHITE" onAction="#salvarLocacao">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
@@ -154,19 +168,23 @@
                   <Button layoutX="738.0" layoutY="70.0" mnemonicParsing="false" onAction="#Veiculo" opacity="0.0" prefHeight="25.0" prefWidth="71.0" text="Veiculo">
                      <cursor>
                         <Cursor fx:constant="HAND" />
-                     </cursor></Button>
+                     </cursor>
+                  </Button>
                   <Button layoutX="870.0" layoutY="70.0" mnemonicParsing="false" onAction="#Clientes" opacity="0.0" prefHeight="25.0" prefWidth="71.0" text="Cliente">
                      <cursor>
                         <Cursor fx:constant="HAND" />
-                     </cursor></Button>
+                     </cursor>
+                  </Button>
                   <Button layoutX="997.0" layoutY="70.0" mnemonicParsing="false" onAction="#Painel" opacity="0.0" prefHeight="25.0" prefWidth="71.0" text="Painel">
                      <cursor>
                         <Cursor fx:constant="HAND" />
-                     </cursor></Button>
+                     </cursor>
+                  </Button>
                   <Button layoutX="133.0" layoutY="56.0" mnemonicParsing="false" onAction="#IrTelaInicial" opacity="0.0" prefHeight="45.0" prefWidth="169.0" text="Button">
                      <cursor>
                         <Cursor fx:constant="HAND" />
-                     </cursor></Button>
+                     </cursor>
+                  </Button>
                </children>
             </Pane>
          </content>

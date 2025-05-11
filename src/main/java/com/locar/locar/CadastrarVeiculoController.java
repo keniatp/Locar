@@ -12,6 +12,8 @@ import javafx.scene.control.*;
 
 import java.io.File;
 
+import com.locar.locar.ExeExecutor.ExecutionResult;
+
 public class CadastrarVeiculoController {
     // Cadastrar veiculo
     @FXML
@@ -66,6 +68,13 @@ public class CadastrarVeiculoController {
     private Button btnSelecionarArquivo;
     @FXML
     private Label labelArquivoSelecionado;
+
+    @FXML
+    public void initialize() {
+        capacidade.getItems().forEach((item) -> item.setOnAction((_) -> capacidade.setText(item.getText())));
+        cambio.getItems().forEach((item) -> item.setOnAction((_) -> cambio.setText(item.getText())));
+        status.getItems().forEach((item) -> item.setOnAction((_) -> status.setText(item.getText())));
+    }
 
     @FXML // Adicionar imagem
     private void selecionarImagem(javafx.event.ActionEvent event) {
@@ -142,6 +151,45 @@ public class CadastrarVeiculoController {
             stageAtual.getScene().setRoot(telaPrincipalRoot);
 
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void salvarVeiculo() {
+        try {
+            Integer realStatus = 1;
+
+            if (status.getText() == "Inativo") {
+                realStatus = 0;
+            }
+
+            ExecutionResult result = ExeExecutor.executeExe("api_bundle.exe",
+                    new String[] { "createVehicle", ipva.getValue().toString(), seguro.getValue().toString(),
+                            quilometragem.getText(), dataAquisicao.getValue().toString(),
+                            vistoria.getValue().toString(), marca.getText(), modelo.getText(), ano.getText(),
+                            cor.getText(),
+                            placa.getText(), "0", realStatus.toString(), renavam.getText(), cambio.getText(),
+                            capacidade.getText().split(" ")[0], ultimaManutencao.getValue().toString(),
+                            tipoDeManutencao.getText(),
+                            "0" });
+
+            if (!result.stderr.isEmpty()) {
+                throw new Exception(result.stderr);
+            }
+
+            System.out.println(result.stdout);
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText(null);
+            alert.setContentText("Sucesso!");
+            alert.showAndWait();
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Erro! Entre em contato com o suporte");
+            alert.showAndWait();
             e.printStackTrace();
         }
     }
