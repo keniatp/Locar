@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2405.0" prefWidth="1300.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.locar.locar.RelatorioController">
+   <children>
+      <ScrollPane prefHeight="2405.0" prefWidth="1300.0">
+         <content>
+            <Pane prefHeight="2500.0" prefWidth="1300.0" style="-fx-background-color: ffffff;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="152.0" layoutX="-1.0" stroke="#f2f2f2" strokeType="INSIDE" width="1300.0" />
+                  <ImageView fitHeight="50.0" fitWidth="210.0" layoutX="113.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/LoCarSemFundocortada.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="741.0" layoutY="67.0" text="Veículo">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="875.0" layoutY="67.0" text="Cliente">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1006.0" layoutY="67.0" text="Painel">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="69.0" fitWidth="85.0" layoutX="1121.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/nicolasCage.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="521.0" layoutY="228.0" text="Histórico veículo">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="244.0" fitWidth="429.0" layoutX="128.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/civic.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="613.0" layoutY="345.0" text="HONDA CIVIC">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="613.0" layoutY="380.0" text="Placa:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="674.0" layoutY="380.0" text="XXXX-XXXX" textFill="#00000080">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="613.0" layoutY="410.0" text="Cor: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="613.0" layoutY="440.0" text="Ano: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="658.0" layoutY="410.0" text="Azul Cósmico Metálico" textFill="#00000080">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="659.0" layoutY="440.0" text="2021" textFill="#00000080">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="930.0" layoutY="345.0" text="Disponível">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="930.0" layoutY="380.0" text="Câmbio: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="930.0" layoutY="410.0" text="Quilometragem:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="930.0" layoutY="440.0" text="Capacidade:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1010.0" layoutY="380.0" text="Automático" textFill="#00000080">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1084.0" layoutY="410.0" text="48.320 km" textFill="#00000080">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1047.0" layoutY="440.0" text="5" textFill="#00000080">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="21.0" fitWidth="34.0" layoutX="1028.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/iconeVerde.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="250.0" layoutX="80.0" layoutY="605.0" stroke="#f2f2f2" strokeType="INSIDE" width="1142.0" />
+                  <Label layoutX="154.0" layoutY="658.0" text="MANUTENÇÃO">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="697.0" text="Ultima manutenção: ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="355.0" layoutY="697.0" text="12/12/2024:" textFill="#00000080">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="731.0" text="Próxima manutenção:">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="765.0" text="Tipo: ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="369.0" layoutY="731.0" text="05/05/2025" textFill="#00000080">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="205.0" layoutY="765.0" text="Óleo, filtros, freios, pneus" textFill="#00000080">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1011.0" layoutY="697.0" text="IPVA pago">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="988.0" layoutY="731.0" text="Seguro ativo">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="900.0" layoutY="765.0" text="Licenciamento em dia">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="76.0" fitWidth="28.0" layoutX="1116.0" layoutY="697.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/iconeDEOk.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="76.0" fitWidth="28.0" layoutX="1116.0" layoutY="731.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/iconeDEOk.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="76.0" fitWidth="28.0" layoutX="1116.0" layoutY="765.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/iconeDEOk.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="481.0" layoutY="918.0" text="Movimentação do Veículo">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="270.0" layoutX="80.0" layoutY="1000.0" stroke="#f2f2f2" strokeType="INSIDE" width="1142.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="270.0" layoutX="80.0" layoutY="1320.0" stroke="#f2f2f2" strokeType="INSIDE" width="1142.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="270.0" layoutX="80.0" layoutY="1641.0" stroke="#f2f2f2" strokeType="INSIDE" width="1142.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="270.0" layoutX="80.0" layoutY="1959.0" stroke="#f2f2f2" strokeType="INSIDE" width="1142.0" />
+                  <Label layoutX="154.0" layoutY="1050.0" text="Cliente">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1093.0" text="Nome: João Silva">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1127.0" text="Período: 01/04 - 03/04/2025">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1160.0" text="Dias: 3">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1193.0" text="Valor diária: R$ 120,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="615.0" layoutY="1050.0" text="Taxas extras ">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="615.0" layoutY="1093.0" text="Atraso: R$ 50,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1050.0" text="Pagamento">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1093.0" text="Total: R$ 410,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1127.0" text="Data: 03/04/2025">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1160.0" text="Método: Crédito">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="769.0" layoutY="1225.0" text="Responsável pela liberação: Antonio Cruz">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1367.0" text="Cliente">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1410.0" text="Nome: Maria Andrade">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1444.0" text="Período: 10/03 - 12/03/2025">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1477.0" text="Dias: 3">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1510.0" text="Valor diária: R$ 120,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="615.0" layoutY="1367.0" text="Taxas extras ">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="615.0" layoutY="1410.0" text="Limpeza: R$ 30,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1367.0" text="Pagamento">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1410.0" text="Total: R$ 390,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1444.0" text="Data: 12/04/2025">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1477.0" text="Método: Pix">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="769.0" layoutY="1542.0" text="Responsável pela liberação: Paula Freitas">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1688.0" text="Cliente">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1731.0" text="Nome: Rafael Costa">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1765.0" text="Período: 05/02 - 06/02/2025">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1798.0" text="Dias: 2">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="1831.0" text="Valor diária: R$ 120,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="615.0" layoutY="1688.0" text="Taxas extras ">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="615.0" layoutY="1731.0" text="Avaria: R$ 150,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1688.0" text="Pagamento">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1731.0" text="Total: R$ 390,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1765.0" text="Data: 06/04/2025">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="1798.0" text="Método: Débito">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="769.0" layoutY="1863.0" text="Responsável pela liberação: Jorge Aragão">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="2008.0" text="Cliente">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="2051.0" text="Nome: Lucas Freitas">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="2085.0" text="Período: 20/01 - 22/01/2025">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="2118.0" text="Dias: 3">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="2151.0" text="Valor diária: R$ 120,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="615.0" layoutY="2008.0" text="Taxas extras ">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="615.0" layoutY="2051.0" text="Não">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="2008.0" text="Pagamento">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="2051.0" text="Total: R$ 360,00">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="2085.0" text="Data: 12/04/2025">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="894.0" layoutY="2118.0" text="Método: Débito">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="769.0" layoutY="2183.0" text="Responsável pela liberação: Paula Freitas">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="202.0" layoutY="1929.0" />
+                  <Label layoutX="912.0" layoutY="1929.0" />
+                  <Button layoutX="741.0" layoutY="70.0" mnemonicParsing="false" onAction="#CadastrarVeiculos" opacity="0.0" prefHeight="25.0" prefWidth="65.0" text="Veiculos">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="876.0" layoutY="70.0" mnemonicParsing="false" onAction="#CadastrarClientes" opacity="0.0" prefHeight="25.0" prefWidth="60.0" text="Cliente">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="1006.0" layoutY="70.0" mnemonicParsing="false" onAction="#Painel" opacity="0.0" prefHeight="25.0" prefWidth="56.0" text="Painel">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="133.0" layoutY="55.0" mnemonicParsing="false" onAction="#IrTelaInicial" opacity="0.0" prefHeight="41.0" prefWidth="168.0" text="Button">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>
